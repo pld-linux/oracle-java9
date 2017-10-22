@@ -20,6 +20,7 @@ Group:		Development/Languages/Java
 # http://www.oracle.com/technetwork/java/javase/downloads/index.html
 # Use get-source.sh script to download locally.
 Source0:	http://download.oracle.com/otn-pub/java/jdk/%{version}+%{bld_ver}/jdk-%{version}_linux-x64_bin.tar.gz
+# NoSource0-md5:	f6a5d86a9d371e9c416c1f82213b326f
 NoSource:	0
 Source1:	Test.java
 Source2:	jmc.desktop
