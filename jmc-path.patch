@@ -1,0 +1,10 @@
+--- jdk-9.0.1/bin/jmc.orig	2017-10-22 16:23:56.279284622 +0200
++++ jdk-9.0.1/bin/jmc	2017-10-22 16:24:44.452327475 +0200
+@@ -1,5 +1,6 @@
+ #!/bin/sh
+ 
+ #Resolve the full path to the JMC dir
+-JMCDIR="$(cd "$(dirname "$0")/../lib/missioncontrol" > /dev/null && pwd -P)"
++PRG=$(readlink -f "$0")
++JMCDIR="$(cd "$(dirname "$PRG")/../lib/missioncontrol" > /dev/null && pwd -P)"
+ "$JMCDIR/jmc" $*
