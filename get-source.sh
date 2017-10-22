@@ -6,7 +6,7 @@
 # Idea based on omnibus-software jre package
 # https://github.com/opscode/omnibus-software/blob/master/config/software/jre.rb
 
-package=java8
+package=java9
 specfile=oracle-$package.spec
 
 # abort on errors
@@ -33,7 +33,7 @@ Press Ctrl-C to Decline License Agreement
 EOF
 read license
 
-urls=$(builder -su *.spec | grep http://)
+urls=$(builder -su "$specfile" | grep http://)
 for url in $urls; do
 	wget -c --header "Cookie: oraclelicense=$cookie; gpw_e24=$refurl" "$url"
 done
