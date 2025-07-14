@@ -341,7 +341,7 @@ Ten pakiet zawiera narzędzie Java Mission Control.
 
 %prep
 %setup -q -n jdk-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 cp -p %{SOURCE1} Test.java
 
